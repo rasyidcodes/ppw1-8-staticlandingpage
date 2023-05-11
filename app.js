@@ -13,6 +13,14 @@ function showAlert() {
         document.getElementById("nameShow").innerText = name;
         document.getElementById("emailShow").innerText = email;
         document.getElementById("messageShow").innerText = message;
+
+        var div = document.getElementById("response");
+            if (div.style.display === "none") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+
       });
     } catch (err) {
       alert(err.message);
