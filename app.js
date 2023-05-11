@@ -13,6 +13,7 @@ function sendData(){
         document.getElementById("nameShow").innerText = name;
         document.getElementById("emailShow").innerText = email;
         document.getElementById("messageShow").innerText = message;
+        
       }
       catch(err) {
         alert(err.message);
