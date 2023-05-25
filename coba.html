@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Calculate Total Quantity</title>
+  <script>
+    var items = [
+      { name: "Item 1", quantity: 0 },
+      { name: "Item 2", quantity: 0 },
+      { name: "Item 3", quantity: 0 }
+    ];
+
+    function updateQuantity(index, quantity) {
+      items[index].quantity = parseInt(quantity);
+    }
+
+    function addItem() {
+      var itemName = prompt("Enter item name");
+      if (itemName) {
+        var newItem = {
+          name: itemName,
+          quantity: 0
+        };
+        items.push(newItem);
+        updateItemList();
+      }
+    }
+
+    function updateItemList() {
+      var itemList = document.getElementById("itemList");
+      itemList.innerHTML = "";
+
+      for (var i = 0; i < items.length; i++) {
+        var listItem = document.createElement("li");
+        listItem.textContent = items[i].name + ": ";
+        var quantityInput = document.createElement("input");
+        quantityInput.type = "number";
+        quantityInput.min = 0;
+        quantityInput.value = items[i].quantity;
+        quantityInput.onchange = (function(index) {
+          return function() {
+            updateQuantity(index, this.value);
+          };
+        })(i);
+        listItem.appendChild(quantityInput);
+        itemList.appendChild(listItem);
+      }
+    }
+
+    function calculateTotal() {
+      var total = 0;
+      for (var i = 0; i < items.length; i++) {
+        total += items[i].quantity;
+      }
+      document.getElementById("total").textContent = "Total Quantity: " + total;
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculate Total Quantity</h1>
+
+  <ul id="itemList">
+    <li>
+      Item 1: <input type="number" min="0" value="0" onchange="updateQuantity(0, this.value)">
+    </li>
+    <li>
+      Item 2: <input type="number" min="0" value="0" onchange="updateQuantity(1, this.value)">
+    </li>
+    <li>
+      Item 3: <input type="number" min="0" value="0" onchange="updateQuantity(2, this.value)">
+    </li>
+  </ul>
+
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="calculateTotal()">Calculate Total</button>
+  <p id="total"></p>
+</body>
+</html> -->
+
+
+

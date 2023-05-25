@@ -261,6 +261,35 @@
       </div>
     </div>
 
+    <div class="sectionkalkulator">
+
+      <div class="container section">
+        <h1 class="text-center" >KALKULATOR SAMPAH PLASTIK</h1>
+
+        <p class="mt-5">Dalam 1 hari berapa banyak anda berkontribusi terhadap sampah plastik? </p>
+
+        <ul class="itemList" id="itemList">
+          <li>
+            Botol Plastik <input type="number" min="0" value="0" onchange="updateQuantity(0, this.value)">
+          </li>
+          <li>
+            Sedotan <input type="number" min="0" value="0" onchange="updateQuantity(1, this.value)">
+          </li>
+          <li>
+            Puntung Rokok <input type="number" min="0" value="0" onchange="updateQuantity(2, this.value)">
+          </li>
+        </ul>
+
+        <button onclick="calculateTotal()" class="btn btn-primary"> Calculate</button>
+        <p id="total"></p>
+
+        <button onclick="addItem()" class="btn btn-secondary">Add Item</button>
+        
+
+
+      </div>
+    </div>
+
     <div class="sectionfive">
       <div class=" section container">
 
@@ -293,6 +322,7 @@
           </div>
         </div>
       </div>
+
 
       <div class="container" id="response" style="display: none;" >
           <h1 style="color:#06BEE1;">Thanks for your response. Your data recorded as :</h1>
