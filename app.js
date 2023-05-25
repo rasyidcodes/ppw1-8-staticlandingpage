@@ -76,5 +76,5 @@ function showAlert() {
     for (var i = 0; i < items.length; i++) {
       total += items[i].quantity;
     }
-    document.getElementById("total").textContent = "Total Sampah: " + total;
+    document.getElementById("total").textContent = "Total Sampah: " + (total * 365);
   }
